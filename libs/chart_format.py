@@ -16,7 +16,7 @@ def format_line_chart(df, colors, index=True, width=9,height=7,title='', subtitl
    
     fig = plt.figure(figsize=(width, height))    
 
-    # Remove the plot frame lines. They are unnecessary chartjunk.    
+    # Remove the top and right plot frame lines.     
     #subplot 111 indicates no subplots
     ax = plt.subplot(111)    
     ax.spines["top"].set_visible(False)    
@@ -35,7 +35,7 @@ def format_line_chart(df, colors, index=True, width=9,height=7,title='', subtitl
     
     # Make sure your axis ticks are large enough to be easily read.    
     # You don't want your viewers squinting to read your plot.    
-    plt.yticks(range(-40, 40, 20),  fontsize=14)    
+    plt.yticks(range(-40, 40, 5),  fontsize=14)    
     plt.xticks(range(20, 162, 20), fontsize=14)    
     
     ax.set_yticks([0], minor=True)    
